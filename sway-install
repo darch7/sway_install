@@ -8,6 +8,10 @@ echo " ____  >  \/\_/  (____  / ____| |__|___|  /____  > |__| (____  /____/____/
 echo "    \/               \/\/              \/     \/            \/                      ";
 echo "                                                                                  ";
 
+echo "Este instalador se intala sobre fedora silverblue ya que toma muchos
+paquetes de ahi aprovechando la inmutabilidad del sistema y todas sus apps de
+gnome"
+
 #fix sudo
 
 sudo -v
@@ -18,21 +22,55 @@ done &
 
 # clonacion de git
 cd
+echo "Clonando Git"
+sleep 3
+clear
+
 git clone https://github.com/darch7/swaywm
 
+clear
+echo "Copy Paste arrancando en 3 seg"
+sleep 3
 # copy paste
 cp -R swaywm/sway-solarized/config/* ~/.config/
+cp -R swaywm/.local/fonts ~/.local/share/
 mkdir ~/.themes 
 mkdir ~/.icons 
 cp -R swaywm/sway-solarized/walls/* ~/Pictures/
 cp -R swaywm/.bashrc ~/
+
+echo "Iniciando instalacion de themas y layareado de flatpak para temas"
+sleep 3 
+clear
+
 sudo cp -R /usr/share/icons/* ~/.icons
 sudo cp -R /usr/share/themes/* ~/.themes
 sudo flatpak override --filesystem=~/.icons
 sudo flatpak override --filesystem=~/.themes
 
-rpm-ostree install light mako neovim ranger sway swaylock waybar wofi lxpolkit kitty 
+echo "Eliminación de residuos"
+sleep 3
+clear
 
+rm -rf swaywm
+ls -la 
+sleep 3
+
+echo "Instalcion de rpm-ostree de sway (rpms layareados) se instalaran
+light,mako,ranger,sway,swaylock,wofi,lxpolkit y kitty"
+sleep 4
+clear
+rpm-ostree install light mako neovim ranger sway swaylock waybar wofi lxpolkit kitty 
+rpm-ostree status
+sleep 5
+clear
+
+uname -a
+sleep 3
+
+echo "Sway Instalado"
+sleep 3
+systemctl reboot
 
 
 
