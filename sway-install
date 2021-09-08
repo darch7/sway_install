@@ -25,6 +25,7 @@ cp -R swaywm/sway-solarized/config/* ~/.config/
 mkdir ~/.themes 
 mkdir ~/.icons 
 cp -R swaywm/sway-solarized/walls/* ~/Pictures/
+cp -R swaywm/.bashrc ~/
 sudo cp -R /usr/share/icons/* ~/.icons
 sudo cp -R /usr/share/themes/* ~/.themes
 sudo flatpak override --filesystem=~/.icons
