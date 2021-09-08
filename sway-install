@@ -64,7 +64,8 @@ echo "Instalcion de rpm-ostree de sway (rpms layareados) se instalaran
 light,mako,ranger,sway,swaylock,wofi,lxpolkit y kitty"
 sleep 5
 clear
-rpm-ostree refresh-md ; rpm-ostree install light mako neovim ranger sway swaylock waybar wofi lxpolkit kitty 
+rpm-ostree cancel
+rpm-ostree install light mako neovim ranger sway swaylock waybar wofi lxpolkit kitty 
 rpm-ostree status
 sleep 5
 clear
