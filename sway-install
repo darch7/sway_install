@@ -66,8 +66,9 @@ sleep 5
 clear
 rpm-ostree cancel
 rpm-ostree install light mako neovim ranger sway swaylock waybar wofi lxpolkit kitty 
+clear
 rpm-ostree status
-sleep 5
+sleep 4
 clear
 
 uname -a
