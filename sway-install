@@ -23,7 +23,7 @@ done &
 # clonacion de git
 cd
 echo "Clonando Git"
-sleep 3
+sleep 4
 clear
 
 git clone https://github.com/darch7/swaywm
@@ -31,16 +31,19 @@ git clone https://github.com/darch7/swaywm
 clear
 echo "Copy Paste arrancando en 3 seg"
 sleep 3
+clear
+
 # copy paste
 cp -R swaywm/sway-solarized/config/* ~/.config/
 cp -R swaywm/.local/fonts ~/.local/share/
 mkdir ~/.themes 
 mkdir ~/.icons 
-cp -R swaywm/sway-solarized/walls/* ~/Pictures/
+mkdir ~/.config/walls
+cp -R swaywm/sway-solarized/walls/* ~/.config/walls
 cp -R swaywm/.bashrc ~/
 
 echo "Iniciando instalacion de themas y layareado de flatpak para temas"
-sleep 3 
+sleep 4 
 clear
 
 sudo cp -R /usr/share/icons/* ~/.icons
@@ -49,18 +52,19 @@ sudo flatpak override --filesystem=~/.icons
 sudo flatpak override --filesystem=~/.themes
 
 echo "Eliminación de residuos"
-sleep 3
+sleep 4
 clear
 
 rm -rf swaywm
 ls -la 
-sleep 3
+sleep 4
+clear
 
 echo "Instalcion de rpm-ostree de sway (rpms layareados) se instalaran
 light,mako,ranger,sway,swaylock,wofi,lxpolkit y kitty"
 sleep 4
 clear
-rpm-ostree install light mako neovim ranger sway swaylock waybar wofi lxpolkit kitty 
+rpm-ostree refresh-md ; rpm-ostree install light mako neovim ranger sway swaylock waybar wofi lxpolkit kitty 
 rpm-ostree status
 sleep 5
 clear
