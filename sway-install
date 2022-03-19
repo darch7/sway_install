@@ -52,6 +52,7 @@ mkdir ~/.icons
 mkdir ~/.config/walls
 cp -R swaywm/sway-cyberdarch/walls/* ~/.config/walls
 cp -R swaywm/.bashrc ~/
+cp -R swaywm/ATAJOS.txt ~/
 
 echo "Eliminación de residuos"
 sleep 4
@@ -77,7 +78,7 @@ clear
 uname -a
 sleep 3
 
-echo "Sway Instalado"
+echo "Sway Instalado" 
 sleep 3
 systemctl reboot
 
