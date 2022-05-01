@@ -69,7 +69,7 @@ light,mako,ranger,sway,swaylock,wofi,lxpolkit y kitty"
 sleep 5
 clear
 rpm-ostree cancel
-rpm-ostree install light wl-clipboard mako neovim ranger sway swaylock waybar wofi lxpolkit kitty 
+rpm-ostree install light wl-clipboard mako neovim ranger sway swaylock waybar wofi lxpolkit kitty virt-manager
 clear
 rpm-ostree status
 sleep 4
@@ -77,6 +77,9 @@ clear
 
 uname -a
 sleep 3
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 
 echo "Sway Instalado" 
 sleep 3
