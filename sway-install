@@ -34,6 +34,9 @@ echo "Iniciando instalacion de themas y layareado de flatpak para temas"
 sleep 4 
 clear
 
+mkdir ~/.themes 
+mkdir ~/.icons 
+mkdir ~/.config/walls
 sudo cp -R /usr/share/icons/* ~/.icons
 sudo cp -R /usr/share/themes/* ~/.themes
 sudo flatpak override --filesystem=~/.icons
@@ -45,14 +48,13 @@ sleep 3
 clear
 
 # copy paste
-cp -R swaywm/sway-cyberdarch/config/* ~/.config/
+cp -R swaywm/sway-gruvbox/config/* ~/.config/
 cp -R swaywm/.local/fonts ~/.local/share/
-mkdir ~/.themes 
-mkdir ~/.icons 
-mkdir ~/.config/walls
-cp -R swaywm/sway-cyberdarch/walls/* ~/.config/walls
+cp -R swaywm/sway-gruvbox/walls/* ~/.config/walls/
 cp -R swaywm/.bashrc ~/
 cp -R swaywm/ATAJOS.txt ~/
+cp -R swaywm/sway-gruvbox/icons/* ~/.icons/
+cp -R swaywm/sway-gruvbox/themes/* ~/.themes/
 
 echo "Eliminación de residuos"
 sleep 4
